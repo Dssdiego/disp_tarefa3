@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">tarefa1</string>
+    <string name="text_title">Welcome back!</string>
+    <string name="text_subtitle">We`re so excited to see you again!</string>
+    <string name="hint_login">Email or Phone Number</string>
+    <string name="hint_password">Password</string>
+    <string name="link_password_forgot">Forgot your password?</string>
+    <string name="link_password_manager">Use a password manager?</string>
+    <string name="btn_login">Login</string>
+</resources>
