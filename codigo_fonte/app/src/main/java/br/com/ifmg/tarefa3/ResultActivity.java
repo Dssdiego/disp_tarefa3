@@ -1,4 +1,4 @@
-package br.com.ifmg.tarefa2;
+package br.com.ifmg.tarefa3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,10 +32,11 @@ public class ResultActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         if (b != null) {
-            int ratingFood = b.getInt(Keys.RATING_FOOD);
-            int ratingDelivery = b.getInt(Keys.RATING_DELIVERY);
-            int ratingCorrect = b.getInt(Keys.RATING_CORRECT);
-            String comment = b.getString(Keys.COMMENT);
+            RatingData ratingData = b.getParcelable(Keys.RATING_DATA);
+            int ratingFood = ratingData.getRatingFood();
+            int ratingDelivery = ratingData.getRatingDelivery();
+            int ratingCorrect = ratingData.getRatingCorrect();
+            String comment = ratingData.getComment();
 
             // Aplica o valor da média nas estrelas
             int mean = (ratingCorrect + ratingDelivery + ratingFood) / 3;

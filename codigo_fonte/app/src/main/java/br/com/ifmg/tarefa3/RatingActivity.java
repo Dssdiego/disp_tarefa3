@@ -1,4 +1,4 @@
-package br.com.ifmg.tarefa2;
+package br.com.ifmg.tarefa3;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,12 +23,12 @@ public class RatingActivity extends AppCompatActivity {
         Button btnLogin = findViewById(R.id.btnSend);
         btnLogin.setOnClickListener(v -> {
             Intent intent = new Intent(this, ResultActivity.class);
-            Bundle b = new Bundle();
-            b.putInt(Keys.RATING_FOOD, (int) ratingFood.getRating());
-            b.putInt(Keys.RATING_DELIVERY, (int) ratingDelivery.getRating());
-            b.putInt(Keys.RATING_CORRECT, (int) ratingCorrect.getRating());
-            b.putString(Keys.COMMENT, editComment.getText().toString());
-            intent.putExtras(b);
+            RatingData ratingData = new RatingData();
+            ratingData.setRatingFood((int) ratingFood.getRating());
+            ratingData.setRatingDelivery((int) ratingDelivery.getRating());
+            ratingData.setRatingCorrect((int) ratingCorrect.getRating());
+            ratingData.setComment(editComment.getText().toString());
+            intent.putExtra(Keys.RATING_DATA, ratingData);
             startActivity(intent);
         });
     }

@@ -1,4 +1,4 @@
-package br.com.ifmg.tarefa2;
+package br.com.ifmg.tarefa3;
 
 import org.junit.Test;
 
